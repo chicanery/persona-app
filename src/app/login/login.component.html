@@ -1,30 +1,25 @@
-<div class="row justify-content-end no-gutters">
-  <div class="col-12 col-md-6 col-lg-4">
-    <div class="jumbotron jumbotron-fluid">
-      <form>
-        <h1>Sign in</h1>
-        <p>or <a routerLink="/register">create an account</a></p>
-        <div class="form-group">
-          <label for="username">Email address</label>
-          <input type="email" class="form-control" id="username">
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input [type]="showPassword ? 'text' : 'password'" class="form-control" id="password">
-          <small class="form-text text-right" aria-controls="password"><a href="javascript:void(0);" (click)="togglePassword()">{{showPassword ? "Hide password" : "Show password"}}</a></small>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" class="form-check-input">
-            Remember me?
-          </label>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">Sign in</button>
-        </div>
-        <p><a routerLink="/forgotpassword" title="Forgot password">Forgot password?</a></p>
-        <p><a routerLink="/account">Account</a></p>
-      </form>
-    </div>
-  </div>
-</div>
+<form>
+  <md-card class="example-card">
+    <md-card-header>
+      <img md-card-avatar src="https://www.gravatar.com/avatar/0000saaaasfd234234000000000000?d=identicon&s=140" />
+      <md-card-title>Shiba Inu</md-card-title>
+      <md-card-subtitle>Dog Breed</md-card-subtitle>
+    </md-card-header>
+    <md-card-content>
+
+      
+        <md-input-container>
+          <input md-input placeholder="Email address">
+        </md-input-container>
+        <md-input-container>
+          <input md-input placeholder="Password" type="password">
+        </md-input-container>
+      
+
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button>Sign in</button>
+      <a md-button routerLink="/register">Register</a>
+    </md-card-actions>
+  </md-card>
+</form>
