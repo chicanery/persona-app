@@ -1,25 +1,26 @@
-<form>
-  <md-card class="example-card">
-    <md-card-header>
-      <img md-card-avatar src="https://www.gravatar.com/avatar/0000saaaasfd234234000000000000?d=identicon&s=140" />
-      <md-card-title>Shiba Inu</md-card-title>
-      <md-card-subtitle>Dog Breed</md-card-subtitle>
-    </md-card-header>
-    <md-card-content>
-
-      
+<div fxLayout="row" fxLayoutAlign="center center" class="container">
+  <md-card>
+    <form>
+      <md-card-header>
+        <md-card-title>Log in</md-card-title>
+      </md-card-header>
+      <md-card-content>
         <md-input-container>
-          <input md-input placeholder="Email address">
+          <input md-input placeholder="Email address" name="email" type="email" required>
         </md-input-container>
         <md-input-container>
-          <input md-input placeholder="Password" type="password">
+          <input md-input placeholder="Password" name="password" type="password" required>
         </md-input-container>
-      
-
-    </md-card-content>
-    <md-card-actions>
-      <button md-raised-button>Sign in</button>
-      <a md-button routerLink="/register">Register</a>
-    </md-card-actions>
+      </md-card-content>
+      <md-card-content>
+        <md-checkbox name="remember">Remember me?</md-checkbox>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button color="primary">Log in</button>
+        <a md-button routerLink="/register">Register</a>
+        <a md-button routerLink="/forgotpassword">Forgot password</a>
+        <a md-button routerLink="/account">Account</a>
+      </md-card-actions>
+    </form>
   </md-card>
-</form>
+</div>

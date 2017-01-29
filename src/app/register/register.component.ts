@@ -6,14 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.styl']
 })
 export class RegisterComponent implements OnInit {
-  showTyping;
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  toggleTyping() {
-    this.showTyping = !this.showTyping;
   }
 }

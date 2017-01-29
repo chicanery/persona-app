@@ -1,20 +1,33 @@
-<div class="container">
-<div class="card">
-  <div class="card-header text-center">
-    <img src="https://www.gravatar.com/avatar/0000saaaaaaad23200000000000000?d=identicon&s=140" style="border-radius: 50%;" />
-  </div>
-  <div class="card-block">
-    <h4 class="card-title">Special title treatment</h4>
-    <div class="card card-outline-primary mb-3 text-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a routerLink="/">Back</a>
-  </div>
-</div>
+<div fxLayout="row" fxLayoutAlign="center center" class="container">
+  <md-card>
+      <md-card-header>
+        <img md-card-avatar src="https://www.gravatar.com/avatar/0000saaaaaaad23200000000000000?d=identicon&s=140">
+        <md-card-title>Hello, username!</md-card-title>
+        <md-card-subtitle>Account settings</md-card-subtitle>
+        <md-menu #accountMenu="mdMenu">
+          <button md-menu-item>Settings</button>
+          <button md-menu-item>Help</button>
+        </md-menu>
+        <button md-icon-button [mdMenuTriggerFor]="accountMenu" class="account-menu">
+          <md-icon>more_vert</md-icon>
+        </button>
+      </md-card-header>
+      <md-card-content>
+        <router-outlet></router-outlet>
+      </md-card-content>
+      <md-card-content>
+        <h1>Account settings</h1>
+        <ul>
+          <li>Vertical ellipsis menu with avatar, just focus on functionality first, create the services and make it all work, then create the account routes
+          <li>Notification preferences with slide toggle
+          <li>Select language
+          <li>Switch to toolbar like SO? Have little diamond icon for admins like SO
+          <li>Have impersonation and administrative toolbar options, inbox, notifications, etc.
+          <li>Replace all scrollbars in app w/ thin ones
+        </ul>
+      </md-card-content>
+      <md-card-actions>
+        <a md-button routerLink="/login">Back</a>
+      </md-card-actions>
+  </md-card>
 </div>

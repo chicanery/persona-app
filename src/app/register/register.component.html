@@ -1,26 +1,24 @@
-<div class="row justify-content-end no-gutters">
-  <div class="col-12 col-md-6 col-lg-4">
-    <div class="jumbotron jumbotron-fluid">
-      <form>
-        <h1>Register</h1>
-        <p>or <a routerLink="/login">sign in</a></p>
-        <div class="form-group">
-          <label for="username">Email address</label>
-          <input type="email" class="form-control" id="username">
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input [type]="showTyping ? 'text' : 'password'" class="form-control" id="password">
-        </div>
-        <div class="form-group">
-          <label for="confirmPassword">Confirm password</label>
-          <input [type]="showTyping ? 'text' : 'password'" class="form-control" id="confirmPassword">
-          <small class="form-text text-right" aria-controls="password confirmPassword"><a href="javascript:void(0);" (click)="toggleTyping()">{{showTyping ? "Hide my typing" : "Show my typing"}}</a></small>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">Register</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<div fxLayout="row" fxLayoutAlign="center center" class="container">
+  <md-card>
+    <form>
+      <md-card-header>
+        <md-card-title>Register</md-card-title>
+      </md-card-header>
+      <md-card-content>
+        <md-input-container>
+          <input md-input placeholder="Email address">
+        </md-input-container>
+        <md-input-container>
+          <input md-input placeholder="Password" type="password">
+        </md-input-container>
+        <md-input-container>
+          <input md-input placeholder="Confirm password" type="password">
+        </md-input-container>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button color="primary">Register</button>
+        <a md-button routerLink="/login">Log in</a>
+      </md-card-actions>
+    </form>
+  </md-card>
 </div>
